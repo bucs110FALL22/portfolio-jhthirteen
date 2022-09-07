@@ -19,4 +19,4 @@ rate = float(input("Enter the current exchange rate for the Euro to US Dollar: "
 amount = float(input("Enter the amount of currency to exchange: (There is a $3 service fee) "))
 total = rate*amount
 result = total-3
-print("You will receive $", result, " US Dollars")
+print("You will receive $", result, "US Dollars")
