@@ -14,4 +14,4 @@ Preferred Name: Jack Hunter
 
 Discord username: jack.#4709
 
-REPL url: https://replit.com/@JackHunter9
+REPL url: https://replit.com/join/zmwsgvdvop-jackhunter9
