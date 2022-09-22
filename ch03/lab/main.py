@@ -33,9 +33,9 @@ leonardo.goto(-100,-20)
 # Race 2:
 new_distance = random.randrange(0,11) #creates an initial random number for first movement  
 for _ in range(10):
-  leonardo.forward(new_distance)
-  new_distance = random.randrange(0,11) #generating new distance between movements 
   michelangelo.forward(new_distance)
+  new_distance = random.randrange(0,11) #generating new distance between movements 
+  leonardo.forward(new_distance)
   new_distance = random.randrange(0,11) #again generating new distance
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
