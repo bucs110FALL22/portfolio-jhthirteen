@@ -6,13 +6,13 @@ sub = {
   "championship":"cinderella win",
   "coach":"general",
   "city":"cuse",
-  "Orange":"Otto",
+  "Orange":"Ottos",
   "Saint Urban":"McDonalds",
   "hot":"cold",
   "mingle":"do yoga",
   "king":"queen"
 }
 
-for k in sub: #k variable for key 
+for k in sub: #k variable = key 
   my_article = my_article.replace(k, sub[k]) #replace goes through entire string looking for each key variable on its iteration 
 print(my_article)
