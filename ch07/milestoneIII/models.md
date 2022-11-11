@@ -27,7 +27,24 @@ Remember, this is to get you thinking and help me guide you. Nothing is set in s
 
 Using the example below, list each model class and its interface
 
-1. < Class Name > 
+1. < Class Player > 
     * __init__
-        * < description >
-    * < additional methods >
+        * < Initializes the player object with characteristics: health xpos ypos direction speed image and rect >
+    * moveRight
+        * < Allows the player to move in the right direction >
+    * moveLeft
+        * < Allows the player to move in the left direction >
+    * moveUp
+        * < Allows the player to move upwards >
+    * moveDown
+        * < Allows the player to move down >
+    * attack
+        * < Utilizes the Sprite class to shoot an object in a certain direction   >
+
+2. < Class Sprite >
+   * __init__
+       * < Initializes the sprite object with characteristics: speed xpos and ypos >
+    * moveUpDown
+        * < Allows the sprite to move in either the upwards or downwards directions >
+    * moveLeftRight
+        * < Allows the sprite to move in either the left or right directions > 
