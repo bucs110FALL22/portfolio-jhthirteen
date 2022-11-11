@@ -54,8 +54,28 @@ class StringUtility:
     return sum
 
   def cipher(self):
+    has_spaces = False
+    iterations = self.length
+    
+    #Determines if string has spaces
+    for i in range(iterations):
+      if(self.string[i] == " "):
+        has_spaces = True
+        break
+
+    #Sets new "iterations" value (addition within cypher) if spaces are present
+    if(has_spaces == True):
+      iterations = iterations//2
+
+    #Removes spaces
+    if(has_spaces == True):
+      for i in range(self.length):
+        self.string = self.string.replace(" ", "")
+        self.length = len(self.string)
+
     str_list = list(self.string)
     new_list = []
+    revert_list = []
     values_to_change= []
     dict = {
       0: "a",
@@ -85,14 +105,16 @@ class StringUtility:
       24: "y",
       25: "z"
     }
-    
+
+    #Actual "sorting" section
     for i in range(self.length):
+      #All lowercase, stores value of uppercase letters to change
       if(str_list[i].isupper()):
         str_list[i] = str_list[i].lower()
         values_to_change.append(i)
       for y in dict:
         if(str_list[i] == dict[y]):
-          z = y + self.length
+          z = y + iterations
           if(z >= 26):
             x = z - 26
             value = dict[x]
@@ -107,5 +129,24 @@ class StringUtility:
         if(i == h):
           new_list[i] = new_list[i].upper()
       new_str = new_str + new_list[i]
+
+    if(has_spaces == True):
+      #Add spaces back to original string
+      for i in range(self.length):
+        revert_list.append(self.string[i])
+        revert_list.append(" ")
+      self.string = ""
+      original_length = (self.length*2)-1
+      for i in range(original_length):
+        self.string = self.string + revert_list[i]
+        
+      str_list = []
+      for i in range(len(new_str)):
+        str_list.append(new_str[i])
+        str_list.append(" ")
+      str_list.pop(-1)
+      new_str  = ""
+      for i in range(len(str_list)):
+        new_str = new_str + str_list[i]
 
     return new_str
