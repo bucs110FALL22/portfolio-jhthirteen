@@ -14,7 +14,7 @@ class NextgamesAPI:
     response = data.json()
     self.event_data = response['events']
 
-  def getNextThreeGames(self):
+  def getNextFiveGames(self):
     self.games = []
     for i in range(0, 5):
       self.game_data = self.event_data[i]['id']
@@ -42,6 +42,7 @@ class NextgamesAPI:
     print(f"Arena: {self.arena} in {self.arena_location}")
 
   def getTicketUrl(self, choice, team):
+    self.getGameInfo(self.games[choice-1], team)
     self.ticketurl = self.event[0]['url']
     print("\nYour Matchup:")
     print("-------------")

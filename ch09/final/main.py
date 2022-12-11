@@ -35,7 +35,7 @@ def main():
   #Gets info for next 5 games and formats it into a visually pleasing output
   next = NextgamesAPI(player.teamname)
   next.get()
-  next.getNextThreeGames()
+  next.getNextFiveGames()
   for i in range(5):
     print("")
     next.getGameInfo(next.games[i], player.teamname)
