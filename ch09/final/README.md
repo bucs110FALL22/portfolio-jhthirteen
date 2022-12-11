@@ -1,7 +1,7 @@
 # CS110 Final Exam
 
 ## SHORT DESCRIPTION *(1 or 2 sentences describing your program)*
-Automates buying tickets to NBA games based on any player you are interested in watching. Provides their season averages and upcoming games, then generates a seatgeek link allowing you to purchase tickets
+Automates buying tickets to NBA games based on any player you are interested in watching. Provides their season averages and upcoming games, then generates a seatgeek link allowing you to purchase tickets. Run by /portfolio-jhthirteen-1/ch09/final python3 main.py
 
 ## KNOWN BUGS AND INCOMPLETE PARTS *(list any known bugs or non-working parts)*
 For some players (I can't seem to figure out why this only effects some, I"m assuming it has to do with some aspect of the player stats API updating process), the statistics are slightly off, but not by much
